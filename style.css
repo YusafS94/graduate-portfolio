@@ -1,0 +1,174 @@
+:root {
+  --primary: #f14d24;
+  --secondary: #2465f1;
+  --accent: #f12456;
+  --bg: #242424;
+  --elevation: #363636;
+  --contrast: #e7e7e7;
+  --radial: linear-gradient(
+    90deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+
+  --family-1: "Montserrat", sans-serif;
+  --family-2: "Press Start 2P", system-ui;
+
+  /* 
+  .montserrat-subrayada-regular {
+    font-family: "Montserrat Subrayada", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .montserrat-subrayada-bold {
+    font-family: "Montserrat Subrayada", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+    // <uniquifier>: Use a unique and descriptive class name
+    // <weight>: Use a value from 100 to 900
+
+    .montserrat-<uniquifier> {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    }
+   */
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--family-1);
+  background-color: var(--bg);
+  color: var(--contrast);
+}
+
+nav {
+  background-color: var(--elevation);
+  padding: 1rem;
+  border-radius: 32px;
+  width: 90%;
+  margin: 0 auto 1rem auto;
+}
+.nav-list {
+  display: flex;
+  list-style: none;
+  font-weight: 400;
+  gap: 2rem;
+}
+.nav-list a {
+  color: var(--contrast);
+  text-decoration: none;
+}
+
+.title {
+  /* font-family: var(--family-2); */
+  font-weight: 700;
+  letter-spacing: 8px;
+
+  font-size: xxx-large;
+}
+.styled-title {
+  font-family: var(--family-2);
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 0;
+}
+header {
+  background: linear-gradient(
+    90deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  border-radius: 72px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 1px;
+}
+.header-left {
+  width: 50%;
+}
+
+.yusaf {
+  border-radius: 72px;
+  height: 100%;
+}
+.split {
+  background-color: var(--elevation);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  border-radius: 72px;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 50%;
+  border: 1px solid var(--accent);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+}
+.tags span {
+  background-color: var(--accent);
+  border-radius: 12px;
+  padding: 4px 8px;
+  font-weight: 700;
+}
+
+.recent {
+  /* background-color: var(--elevation); */
+  border-radius: 72px;
+  width: 90%;
+  margin: 2rem auto;
+  display: flex;
+  gap: 10px;
+}
+
+.card {
+  background-color: var(--primary);
+  border: 1px solid var(--elevation);
+  border-radius: 48px;
+  width: 300px;
+  /* color: var(--elevation); */
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  height: 300px;
+  /* padding: 2rem; */
+}
+.card-1 {
+  background-image: url(./imgs/code.jpg);
+  background-size: cover;
+}
+.card-2 {
+  background-image: url(./imgs/wireframes-2.jpg);
+  background-size: cover;
+}
+.card-text {
+  padding: 0;
+  /* background-color: #a80041; */
+  background: linear-gradient(180deg, rgba(63, 94, 251, 0) 0%, var(--bg) 100%);
+  padding: 1rem 1.5rem;
+  border-bottom-left-radius: 48px;
+  border-bottom-right-radius: 48px;
+}
+.card-text:hover {
+  padding: 3rem 1.5rem;
+  transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.card-text:not(:hover) {
+  transition: all 0.2s linear;
+}
