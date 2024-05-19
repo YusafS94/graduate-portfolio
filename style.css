@@ -76,7 +76,7 @@ nav {
 .title {
   /* font-family: var(--family-2); */
   font-weight: 700;
-  letter-spacing: 8px;
+  letter-spacing: 4px;
 
   font-size: xxx-large;
 }
@@ -85,7 +85,9 @@ nav {
   font-weight: 700;
   color: var(--primary);
   line-height: 0;
+  text-decoration: underline;
 }
+
 header {
   background: linear-gradient(
     90deg,
@@ -99,6 +101,29 @@ header {
 }
 .header-left {
   width: 50%;
+}
+.title-container {
+  display: flex;
+}
+.typewriter-container {
+  display: inline-block;
+}
+.typewriter {
+  border-right: 5px solid var(--primary);
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(5), cursor 0.4s step-end infinite alternate;
+}
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
 }
 
 .yusaf {
