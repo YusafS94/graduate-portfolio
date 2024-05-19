@@ -100,7 +100,12 @@ header {
   padding: 1px;
 }
 .header-left {
-  width: 50%;
+  width: 100%;
+}
+.header-right {
+  width: 100%;
+  display: flex;
+  justify-content: end;
 }
 .title-container {
   display: flex;
@@ -128,7 +133,8 @@ header {
 
 .yusaf {
   border-radius: 72px;
-  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
 .split {
   background-color: var(--elevation);
@@ -163,7 +169,6 @@ header {
 }
 
 .card {
-  background-color: var(--primary);
   border: 1px solid var(--elevation);
   border-radius: 48px;
   width: 300px;
@@ -173,6 +178,8 @@ header {
   justify-content: end;
   height: 300px;
   /* padding: 2rem; */
+  overflow: hidden;
+  position: relative;
 }
 .card-1 {
   background-image: url(./imgs/code.jpg);
@@ -191,9 +198,102 @@ header {
   border-bottom-right-radius: 48px;
 }
 .card-text:hover {
-  padding: 3rem 1.5rem;
+  padding: 6rem 1.5rem;
   transition: all 0.2s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .card-text:not(:hover) {
   transition: all 0.2s linear;
+}
+.card-link {
+  color: var(--contrast);
+}
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  border-radius: 12px;
+  position: absolute;
+  padding: 1rem 0;
+}
+.card-tags span {
+  background-color: var(--accent);
+  border-radius: 12px;
+  padding: 4px 8px;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 1200px) {
+  .tags {
+    width: auto;
+    max-width: 100%;
+    margin-right: 1rem;
+  }
+  .title {
+    font-weight: 700;
+    letter-spacing: 4px;
+    font-size: xx-large;
+  }
+  .styled-title {
+    display: inline-block;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .header-left,
+  .header-right {
+    width: 100%;
+  }
+  .header-right {
+    justify-content: center;
+  }
+  .tags {
+    width: auto;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  .split {
+    flex-direction: column;
+  }
+  .yusaf {
+    width: 100%;
+  }
+  .card-text {
+    padding: 6rem 1.5rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .title-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .typewriter {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .title {
+    text-align: center;
+  }
+  .subtitle {
+    font-size: large;
+  }
+  .card {
+    border-radius: 48px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 200px;
+  }
+  .card-text {
+    padding: 6rem 1.5rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .typewriter {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  .typewriter {
+    width: 80%;
+  }
 }
